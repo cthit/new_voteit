@@ -35,7 +35,7 @@ def main():
         for field, data in FIELD_TRANSLATIONS.items():
             value = getattr(user, field, None)
             if value is not None:
-                target_value = data['translations'].get(value)
+                target_value = data['translations'].get(value, '')
                 setattr(user, data['target_field'], target_value)
                 delattr(user, field)
                 if hasattr(user, 'gender_freetext'):
