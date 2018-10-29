@@ -26,7 +26,7 @@ FIELD_TRANSLATIONS = {
 
 
 def main():
-    env = bootstrap('etc/development.ini')
+    env = bootstrap('etc/production.ini')
     root = env['root']
     # request = env['request']
     users = root['users']
