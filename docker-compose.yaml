@@ -1,0 +1,17 @@
+version: "2"
+services:
+  voteit:
+    container_name: voteit
+    image: swexbe/voteit:latest
+    ports:
+      - 9010:80
+    labels:
+      - "traefik.enable=true"
+      - "traefik.port=80"
+      - "traefik.frontend.rule=Host:voteit.swex.be"
+    networks:
+      - web
+networks:
+  web:
+    external:
+      name: web
