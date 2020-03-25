@@ -3,12 +3,16 @@ services:
   voteit:
     container_name: voteit
     image: swexbe/voteit:latest
+    environment: 
+      - SMTP_HOST=%HOST%
+      - SMTP_PORT=%PORT%
+      - SMTP_SENDER=%SENDER%
     ports:
       - 9010:80
     labels:
       - "traefik.enable=true"
       - "traefik.port=80"
-      - "traefik.frontend.rule=Host:voteit.swex.be"
+      - "traefik.frontend.rule=Host:%LOCATION%"
     networks:
       - web
 networks:
