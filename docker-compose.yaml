@@ -7,17 +7,19 @@ services:
       - SMTP_HOST=%HOST%
       - SMTP_PORT=%PORT%
       - SMTP_SENDER=%SENDER%
-    volumes: 
-      - %DIR%:/app/var/zeo
-    ports:
-      - 9010:80
-    labels:
-      - "traefik.enable=true"
-      - "traefik.port=80"
-      - "traefik.frontend.rule=Host:%LOCATION%"
-    networks:
-      - web
-networks:
-  web:
-    external:
-      name: web
+      volumes: 
+        - /hdd/voteit/zeo:/app/var/zeo
+        - /hdd/voteit/log:/app/var/log
+        - /hdd/voteit/gamma.json:/app/var/gamma.json
+      ports:
+        - 9010:80
+      labels:
+        - "traefik.enable=true"
+        - "traefik.port=80"
+        - "traefik.frontend.rule=Host:voteit.swex.be"
+      networks:
+        - web
+  networks:
+    web:
+      external:
+        name: web
