@@ -1,0 +1,6 @@
+{
+  "client_id": "%GAMMA_CLIENT_ID%",
+  "auth_uri": "%GAMMA_AUTH_URI%",
+  "token_uri": "%GAMMA_TOKEN_URI%",
+  "client_secret": "%GAMMA_CLIENT_SECRET%"
+}
