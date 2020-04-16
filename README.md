@@ -23,7 +23,7 @@ The following environment variables are needed to run:
 The following volume mappings are useful
 
 ```
-    # General data directory for persistancy
+    # General data directory for persistency
     - /data/svoteit/zeo:/app/var/zeo
     # Logs
     - /data/svoteit/log:/app/var/log
