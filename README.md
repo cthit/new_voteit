@@ -2,6 +2,8 @@
 
 Based on https://github.com/voteit/sverok_buildout
 
+[![](https://images.microbadger.com/badges/version/swexbe/voteit.svg)](https://microbadger.com/images/swexbe/voteit "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/swexbe/voteit.svg)](https://microbadger.com/images/swexbe/voteit "Get your own image badge on microbadger.com")
+
 ## Env variables
 
 The following environment variables are needed to run:
@@ -18,7 +20,7 @@ The following environment variables are needed to run:
 
 ## Volumes
 
-The following volume mapping are useful
+The following volume mappings are useful
 
 ```
     # General data directory for persistancy
